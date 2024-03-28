@@ -1,0 +1,44 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.4'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.some'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2' // in-memory database for development
+
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.3' // Springdoc OpenAPI for generating OpenAPI documentation
+	implementation 'org.zalando:logbook-spring-boot-starter:2.5.0' // for HTTP request and response logging
+	implementation 'org.springframework.boot:spring-boot-starter-test'
+
+	annotationProcessor 'org.projectlombok:lombok' // for generating boilerplate code during compilation
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+	testImplementation 'com.h2database:h2'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
