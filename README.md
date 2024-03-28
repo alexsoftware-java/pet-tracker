@@ -5,7 +5,7 @@ The Pet Tracking Application is a Java Spring Boot project for managing and trac
 ## Requirements
 
 - Java 17
-- Spring Boot 2.x
+- Spring Boot 3.2
 - Gradle
 
 ## Installation
@@ -13,7 +13,7 @@ The Pet Tracking Application is a Java Spring Boot project for managing and trac
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_username/pet-tracking-app.git
+    git clone https://github.com/alexsoftware-java/pet-tracker.git
     ```
 
 2. Navigate to the project directory:
@@ -35,6 +35,8 @@ The Pet Tracking Application is a Java Spring Boot project for managing and trac
     ```
 
 ## Usage
+
+You can check how to interact with the API using JSON payloads, and the full list of methods with examples via [Swagger UI](http://localhost:8080/swagger-ui/index.html).
 
 The following endpoints are available:
 
@@ -75,3 +77,11 @@ Example:
 bash
 curl -X GET http://localhost:8080/api/pets/outside
 ```
+
+Ensure that you include the appropriate headers, such as `Content-Type: application/json`, when making the request.
+
+---------------------------
+
+## Support
+
+If you encounter any issues or have questions, please feel free to contact me at [alex.khlizov@gmail.com](mailto:alex.khlizov@gmail.com).
