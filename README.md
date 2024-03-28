@@ -44,7 +44,7 @@ The following endpoints are available:
 
 Endpoint: `POST /api/pets`
 
-Receives pet tracking data.
+Write pet tracking data to service.
 
 Example:
 
@@ -65,25 +65,14 @@ Gets all pets for a specific owner ID.
 Example:
 ```bash
 curl http://localhost:8080/api/pets/owner/1
-[
-                              {
-                                "petType": "CAT",
-                                "trackerType": "SMALL_CAT",
-                                "ownerId": 1,
-                                "inZone": true,
-                                "lostTracker": false
-                              }
-                            ]
 ```
 
 ### 3. Get All Pets Outside Zone
 
 Endpoint: GET /api/pets/outside
 Gets all pets outside the power saving zone.
-
 Example:
-```
-bash
+```bash
 curl -X GET http://localhost:8080/api/pets/outside
 ```
 
