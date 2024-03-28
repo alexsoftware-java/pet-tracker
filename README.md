@@ -1,6 +1,6 @@
 # Pet Tracking Application
 
-The Pet Tracking Application is a Java Spring Boot project for managing and tracking pets (dogs and cats) using different types of trackers. It provides REST API endpoints to receive pet tracking data, store the data, and query stored data.
+The Pet Tracking Application is a pretty simple, 3-hours, Java Spring Boot project for managing and tracking pets (dogs and cats)
 
 ## Requirements
 
@@ -19,7 +19,7 @@ The Pet Tracking Application is a Java Spring Boot project for managing and trac
 2. Navigate to the project directory:
 
     ```bash
-    cd pet-tracking-app
+    cd pet-trackier
     ```
 
 3. Build the project using Gradle:
@@ -64,7 +64,16 @@ Endpoint: GET /api/pets/owner/{ownerId}
 Gets all pets for a specific owner ID.
 Example:
 ```bash
-curl -X GET http://localhost:8080/api/pets/owner/1
+curl http://localhost:8080/api/pets/owner/1
+[
+                              {
+                                "petType": "CAT",
+                                "trackerType": "SMALL_CAT",
+                                "ownerId": 1,
+                                "inZone": true,
+                                "lostTracker": false
+                              }
+                            ]
 ```
 
 ### 3. Get All Pets Outside Zone
