@@ -35,6 +35,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok' // for generating boilerplate code during compilation
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.junit.jupiter:junit-jupiter'
+	testImplementation 'com.h2database:h2'
 
 }
 
